@@ -1,12 +1,6 @@
 <template>
   <section class="container flex-col">
     <div class="flex bg-gray-500 p-3 rounded">
-      <!-- <t-input v-model="find" />
-
-      <t-button class="mx-3">
-        Поиск
-      </t-button> -->
-
       <t-select
         v-model="selectCity"
         placeholder="По всем городам"
@@ -34,8 +28,6 @@
 </template>
 
 <script>
-// import gql from 'graphql-tag'
-
 import Card from '@/components/Card'
 import LoadIndicator from '@/components/LoadIndicator'
 
@@ -67,9 +59,6 @@ export default {
 
     city: {
       query: city,
-      // variables: {
-      //   slug: this.selectCity
-      // }
       variables () {
         return {
           slug: this.selectCity
