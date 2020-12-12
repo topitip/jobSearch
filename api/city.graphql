@@ -1,0 +1,27 @@
+query CityChoose($slug: String!) {
+  city(input: {slug: $slug}) {
+    id
+    jobs {
+      id,
+      title,
+      company {
+        id,
+        name,
+        logoUrl
+      },
+      cities {
+        id,
+        name,
+        slug # город вакансии
+      },
+      locationNames,
+      tags {
+        id,
+        name
+      },
+      remotes {
+        name
+      }
+    }
+  }
+}
